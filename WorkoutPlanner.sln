@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutPlanner.Domain", "WorkoutPlanner.Domain\WorkoutPlanner.Domain.csproj", "{118533FE-1B61-482E-8D7A-526F1DF4DF0C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutPlanner.Common", "WorkoutPlanner.Common\WorkoutPlanner.Common.csproj", "{26591095-3C4C-4648-9E1C-E56427FF2C9C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutPlanner.Services", "WorkoutPlanner.Services\WorkoutPlanner.Services.csproj", "{8D323CC9-9BC7-4CBB-B94B-85017DA88EE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CABF523B-91E1-437C-BB01-F8F47CF2887E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F39D96DC-28F0-46E9-820D-7D7616B41D52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5CBC911E-2BFB-4E59-AAF1-FD1EDF90E9DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{7A72F63A-3032-4550-9EFF-3FE65DA3AB9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{118533FE-1B61-482E-8D7A-526F1DF4DF0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{118533FE-1B61-482E-8D7A-526F1DF4DF0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{118533FE-1B61-482E-8D7A-526F1DF4DF0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{118533FE-1B61-482E-8D7A-526F1DF4DF0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26591095-3C4C-4648-9E1C-E56427FF2C9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26591095-3C4C-4648-9E1C-E56427FF2C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26591095-3C4C-4648-9E1C-E56427FF2C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26591095-3C4C-4648-9E1C-E56427FF2C9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D323CC9-9BC7-4CBB-B94B-85017DA88EE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D323CC9-9BC7-4CBB-B94B-85017DA88EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D323CC9-9BC7-4CBB-B94B-85017DA88EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D323CC9-9BC7-4CBB-B94B-85017DA88EE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{118533FE-1B61-482E-8D7A-526F1DF4DF0C} = {F39D96DC-28F0-46E9-820D-7D7616B41D52}
+		{26591095-3C4C-4648-9E1C-E56427FF2C9C} = {F39D96DC-28F0-46E9-820D-7D7616B41D52}
+		{8D323CC9-9BC7-4CBB-B94B-85017DA88EE8} = {5CBC911E-2BFB-4E59-AAF1-FD1EDF90E9DB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50938CEE-273D-4010-B282-1477C0C958B1}
+	EndGlobalSection
+EndGlobal
