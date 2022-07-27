@@ -12,12 +12,14 @@ builder.Services.AddSwaggerDoc();
 var app = builder.Build();
 
 app.UseMiddleware<ValidationExceptionMiddleware>();
+app.UseMiddleware<DefaultExceptionMiddleware>();
 app.UseFastEndpoints(x =>
 {
     x.ErrorResponseBuilder = (failures, _) =>
     {
         return new FailureResponse
         {
+            StatusCode = StatusCodes.Status400BadRequest,
             Errors = failures.Select(y => y.ErrorMessage).ToList()
         };
     };
