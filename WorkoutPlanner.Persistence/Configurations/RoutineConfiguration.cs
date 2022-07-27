@@ -12,12 +12,12 @@ public class RoutineConfiguration : IEntityTypeConfiguration<Routine>
         builder.HasKey(x => x.Id);
 
         builder.Property(x => x.Id)
-            .UseIdentityColumn(1, 1);
+            .HasDefaultValueSql("NEWID()");
 
         builder.Property(x => x.Description);
         builder.Property(x => x.ExplainVideoUrl)
             .HasMaxLength(200);
         builder.Property(x => x.DateCreated)
-            .HasDefaultValueSql();
+            .HasDefaultValueSql("getdate()");
     }
 }

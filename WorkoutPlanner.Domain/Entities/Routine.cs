@@ -2,7 +2,7 @@
 
 public class Routine
 {
-    public int Id { get; set; }
+    public Guid Id { get; set; }
     public string ExplainVideoUrl { get; set; } = default!;
     public DateTime DateCreated { get; set; } = DateTime.UtcNow;
     public string? Description { get; set; }
