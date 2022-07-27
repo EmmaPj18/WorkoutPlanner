@@ -13,7 +13,7 @@ public static class EnumExtensions
         if (fieldInfo is null) return null;
 
         if (fieldInfo.GetCustomAttributes(typeof(DescriptionAttribute), false) is DescriptionAttribute[] attributes 
-            && !attributes.Any())
+            && attributes.Any())
         {
             return attributes.FirstOrDefault()?.Description;
         }

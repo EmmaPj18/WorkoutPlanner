@@ -9,7 +9,7 @@ public class LookupConfiguration : IEntityTypeConfiguration<Lookup>
     public void Configure(EntityTypeBuilder<Lookup> builder)
     {
         builder.ToTable(nameof(Lookup), WorkoutPlannerDbContextBase.SCHEMA);
-        builder.HasKey(x => x.Id);
+        builder.HasKey(x => new { x.Id, x.Category });
 
         builder.Property(x => x.Id).ValueGeneratedNever();
         builder.Property(x => x.Category).HasMaxLength(64);
@@ -18,8 +18,6 @@ public class LookupConfiguration : IEntityTypeConfiguration<Lookup>
         builder.Property(x => x.IsActive);
         builder.Property(x => x.SortOrder);
 
-        builder.HasIndex(x => new { x.Id, x.Category })
-            .IsUnique();
         builder.HasIndex(x => new { x.Category, x.Name });
     }
 }

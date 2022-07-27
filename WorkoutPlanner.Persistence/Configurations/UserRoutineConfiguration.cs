@@ -14,7 +14,7 @@ public class UserRoutineConfiguration : IEntityTypeConfiguration<UserRoutine>
         builder.Property(x => x.UserId);
         builder.Property(x => x.RoutineId);
         builder.Property(x => x.WorkOutDate)
-            .HasDefaultValueSql();
+            .HasDefaultValueSql("getdate()");
 
         // Foreing Key
         builder.HasOne(x => x.User)

@@ -8,7 +8,7 @@ public class ExerciseConfiguration : IEntityTypeConfiguration<Exercise>
 {
     public void Configure(EntityTypeBuilder<Exercise> builder)
     {
-        builder.ToTable(nameof(Routine), WorkoutPlannerDbContextBase.SCHEMA);
+        builder.ToTable(nameof(Exercise), WorkoutPlannerDbContextBase.SCHEMA);
         builder.HasKey(x => x.Id);
 
         builder.Property(x => x.Id)

@@ -37,7 +37,7 @@ public static class Host
         return services.AddDbContext<IReadWriteWorkoutPlannerDbContext, ReadWriteWorkoutPlannerDbContext>(options =>
         {
             options.ApplyBuilderOptions(isReadOnly: false,
-                connectionString: configuration.GetConnectionString(ReadWriteWorkoutPlannerDbContext.ConnectionString));
+                connectionString: configuration.GetConnectionString(ReadWriteWorkoutPlannerDbContext.CONNECTION_STRING_NAME));
         });
     }
 
@@ -47,7 +47,7 @@ public static class Host
         return services.AddDbContext<IReadOnlyWorkoutPlannerDbContext, ReadOnlyWorkoutPlannerDbContext>(options =>
         {
             options.ApplyBuilderOptions(isReadOnly: true,
-                connectionString: configuration.GetConnectionString(ReadWriteWorkoutPlannerDbContext.ConnectionString));
+                connectionString: configuration.GetConnectionString(ReadWriteWorkoutPlannerDbContext.CONNECTION_STRING_NAME));
         });
     }
 

@@ -9,25 +9,25 @@ namespace WorkoutPlanner.Persistence.DataSeeds;
 public class LookupSeeds : IDataSeedService
 {
     public readonly Lookup[] SetTypeSeeds = Enum.GetValues<SetType>()
-        .Select((x, i) => new Lookup
+        .Select((enumValue, index) => new Lookup
         {
             Category = nameof(SetType),
-            Id = (int)x,
+            Id = (int)enumValue,
             IsActive = true,
-            Name = x.ToString(),
-            SortOrder = i,
-            Description = x.GetDescription()
+            Name = enumValue.ToString(),
+            SortOrder = index,
+            Description = enumValue.GetDescription()
         }).ToArray();
 
     public readonly Lookup[] QuantityTypeSeeds = Enum.GetValues<QuantityType>()
-        .Select((x, i) => new Lookup
+        .Select((enumValue, index) => new Lookup
         {
             Category = nameof(QuantityType),
-            Id = (int)x,
+            Id = (int)enumValue,
             IsActive = true,
-            Name = x.ToString(),
-            SortOrder = i,
-            Description = x.GetDescription()
+            Name = enumValue.ToString(),
+            SortOrder = index,
+            Description = enumValue.GetDescription()
         }).ToArray();
 
     public void Seed(ModelBuilder modelBuilder)
