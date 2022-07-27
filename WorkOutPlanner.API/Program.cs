@@ -1,12 +1,11 @@
-using FastEndpoints;
 using FastEndpoints.Swagger;
-using WorkoutPlanner.Domain.Models;
-using WorkOutPlanner.API.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 
 // Services
+builder.Services.AddWorkoutPlannerPersistenceServices(configuration);
+builder.Services.AddWorkoutPlannerServices();
 builder.Services.AddFastEndpoints();
 builder.Services.AddSwaggerDoc();
 
@@ -17,7 +16,7 @@ app.UseFastEndpoints(x =>
 {
     x.ErrorResponseBuilder = (failures, _) =>
     {
-        return new ValidationFailureResponse
+        return new FailureResponse
         {
             Errors = failures.Select(y => y.ErrorMessage).ToList()
         };

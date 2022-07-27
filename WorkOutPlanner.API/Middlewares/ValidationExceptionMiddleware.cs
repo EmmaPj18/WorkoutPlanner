@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using WorkoutPlanner.Domain.Models;
 
 namespace WorkOutPlanner.API.Middlewares;
 
@@ -20,10 +19,11 @@ public class ValidationExceptionMiddleware
         }
         catch (ValidationException exception)
         {
-            context.Response.StatusCode = 400;
+            context.Response.StatusCode = StatusCodes.Status400BadRequest;
             var messages = exception.Errors.Select(x => x.ErrorMessage).ToList();
-            var validationFailureResponse = new ValidationFailureResponse
+            var validationFailureResponse = new FailureResponse
             {
+                StatusCode = StatusCodes.Status400BadRequest,
                 Errors = messages
             };
             await context.Response.WriteAsJsonAsync(validationFailureResponse);

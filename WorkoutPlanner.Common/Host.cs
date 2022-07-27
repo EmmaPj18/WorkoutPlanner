@@ -1,5 +1,5 @@
 ﻿namespace WorkoutPlanner.Common;
-public class Host
+public static class Host
 {
-
+    
 }

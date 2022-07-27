@@ -5,8 +5,8 @@ namespace WorkoutPlanner.Persistence;
 
 public class ReadWriteWorkoutPlannerDbContext : WorkoutPlannerDbContextBase, IReadWriteWorkoutPlannerDbContext
 {
-    public ReadWriteWorkoutPlannerDbContext(DbContextOptions<ReadWriteWorkoutPlannerDbContext> options)
-        : base(options)
+    public ReadWriteWorkoutPlannerDbContext(DbContextOptions<ReadWriteWorkoutPlannerDbContext> option, IEnumerable<IDataSeedService> dataSeedServices)
+        : base(options, dataSeedServices)
     {
 
     }

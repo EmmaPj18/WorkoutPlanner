@@ -1,0 +1,9 @@
+﻿global using FastEndpoints;
+global using MediatR;
+global using Microsoft.AspNetCore.Authorization;
+global using WorkoutPlanner.Domain.Contracts.Requests;
+global using WorkoutPlanner.Domain.Contracts.Responses;
+global using WorkoutPlanner.Domain.Models;
+global using WorkoutPlanner.Persistence;
+global using WorkoutPlanner.Services;
+global using WorkOutPlanner.API.Middlewares;

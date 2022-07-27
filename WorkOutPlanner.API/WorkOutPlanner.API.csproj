@@ -7,13 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
     <PackageReference Include="FastEndpoints" Version="4.3.1" />
     <PackageReference Include="FastEndpoints.Swagger" Version="4.3.1" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WorkoutPlanner.Common\WorkoutPlanner.Common.csproj" />
     <ProjectReference Include="..\WorkoutPlanner.Domain\WorkoutPlanner.Domain.csproj" />
+    <ProjectReference Include="..\WorkoutPlanner.Persistence\WorkoutPlanner.Persistence.csproj" />
+    <ProjectReference Include="..\WorkoutPlanner.Services\WorkoutPlanner.Services.csproj" />
   </ItemGroup>
 
 </Project>

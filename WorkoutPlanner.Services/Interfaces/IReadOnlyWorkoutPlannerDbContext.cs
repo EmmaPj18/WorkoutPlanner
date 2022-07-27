@@ -1,6 +1,4 @@
-﻿using WorkoutPlanner.Domain.Entities;
-
-namespace WorkoutPlanner.Services.Interfaces;
+﻿namespace WorkoutPlanner.Services.Interfaces;
 
 public interface IReadOnlyWorkoutPlannerDbContext : IDisposable
 {

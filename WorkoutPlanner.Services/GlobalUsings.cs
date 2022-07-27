@@ -1,6 +1,11 @@
-﻿global using System;
-global using System.Collections.Generic;
-global using System.Linq;
-global using System.Text;
-global using System.Threading.Tasks;
+﻿global using AutoMapper;
+global using FluentValidation;
+global using MediatR;
 global using Microsoft.EntityFrameworkCore;
+global using System;
+global using System.Threading.Tasks;
+global using WorkoutPlanner.Common.Validation;
+global using WorkoutPlanner.Domain.Contracts.Requests;
+global using WorkoutPlanner.Domain.Contracts.Responses;
+global using WorkoutPlanner.Domain.Entities;
+global using WorkoutPlanner.Services.Interfaces;

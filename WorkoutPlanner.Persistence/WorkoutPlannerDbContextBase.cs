@@ -11,22 +11,22 @@ public abstract class WorkoutPlannerDbContextBase : DbContext
     internal const string SCHEMA = "dbo";
     private readonly IEnumerable<IDataSeedService> _dataSeedServices;
 
-    public WorkoutPlannerDbContextBase(DbContextOptions<WorkoutPlannerDbContextBase> options, IEnumerable<IDataSeedService> dataSeedService)
+    public WorkoutPlannerDbContextBase(DbContextOptions<WorkoutPlannerDbContextBase> options, IEnumerable<IDataSeedService> dataSeedServices)
     : base(options)
     {
-        _dataSeedServices = dataSeedService;
+        _dataSeedServices = dataSeedServices;
     }
 
-    public WorkoutPlannerDbContextBase(DbContextOptions<ReadOnlyWorkoutPlannerDbContext> options, IEnumerable<IDataSeedService> dataSeedService)
+    public WorkoutPlannerDbContextBase(DbContextOptions<ReadOnlyWorkoutPlannerDbContext> options, IEnumerable<IDataSeedService> dataSeedServices)
         : base(options)
     {
-        _dataSeedServices = dataSeedService;
+        _dataSeedServices = dataSeedServices;
     }
 
-    public WorkoutPlannerDbContextBase(DbContextOptions<ReadWriteWorkoutPlannerDbContext> options, IEnumerable<IDataSeedService> dataSeedService)
+    public WorkoutPlannerDbContextBase(DbContextOptions<ReadWriteWorkoutPlannerDbContext> options, IEnumerable<IDataSeedService> dataSeedServices)
         : base(options)
     {
-        _dataSeedServices = dataSeedService;
+        _dataSeedServices = dataSeedServices;
     }
 
     public DbSet<Exercise> Exercises { get; set; } = default!;
