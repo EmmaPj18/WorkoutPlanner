@@ -19,6 +19,22 @@ public class ExerciseConfiguration : IEntityTypeConfiguration<Exercise>
             .HasMaxLength(200);
         builder.Property(x => x.Name)
             .HasMaxLength(150);
+        builder.Property(x => x.EquipmentId);
+        builder.Property(x => x.BodyPartId);
+        builder.Property(x => x.TargetMuscleId);
+
+        // ForeignKey
+        builder.HasOne(x => x.Equipment)
+            .WithMany(x => x.Exercises)
+            .HasForeignKey(x => x.EquipmentId);
+
+        builder.HasOne(x => x.BodyPart)
+            .WithMany(x => x.Exercises)
+            .HasForeignKey(x => x.BodyPartId);
+
+        builder.HasOne(x => x.TargetMuscle)
+            .WithMany(x => x.Exercises)
+            .HasForeignKey(x => x.TargetMuscleId);
 
         // Index
         builder.HasIndex(x => x.Name)

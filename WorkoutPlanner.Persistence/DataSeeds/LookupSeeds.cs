@@ -8,7 +8,7 @@ namespace WorkoutPlanner.Persistence.DataSeeds;
 
 public class LookupSeeds : IDataSeedService
 {
-    public readonly Lookup[] SetTypeSeeds = Enum.GetValues<SetType>()
+    private readonly Lookup[] SetTypeSeeds = Enum.GetValues<SetType>()
         .Select((enumValue, index) => new Lookup
         {
             Category = nameof(SetType),
@@ -19,7 +19,7 @@ public class LookupSeeds : IDataSeedService
             Description = enumValue.GetDescription()
         }).ToArray();
 
-    public readonly Lookup[] QuantityTypeSeeds = Enum.GetValues<QuantityType>()
+    private readonly Lookup[] QuantityTypeSeeds = Enum.GetValues<QuantityType>()
         .Select((enumValue, index) => new Lookup
         {
             Category = nameof(QuantityType),
@@ -30,10 +30,21 @@ public class LookupSeeds : IDataSeedService
             Description = enumValue.GetDescription()
         }).ToArray();
 
+    private readonly Lookup[] EquipmentSeeds = Enum.GetValues<Equipment>()
+        .Select((enumValue, index) => new Lookup
+        {
+            Category = nameof(Equipment),
+            Id = (int)enumValue,
+            IsActive = true,
+            Name = enumValue.ToString(),
+            SortOrder = index,
+            Description = enumValue.GetDescription()
+        }).ToArray();
+
     public void Seed(ModelBuilder modelBuilder)
     {
-
         modelBuilder.Entity<Lookup>().HasData(SetTypeSeeds);
         modelBuilder.Entity<Lookup>().HasData(QuantityTypeSeeds);
+        modelBuilder.Entity<Lookup>().HasData(EquipmentSeeds);
     }
 }

@@ -10,5 +10,8 @@ public interface IReadOnlyWorkoutPlannerDbContext : IDisposable
     DbSet<UserRoutine> UserRoutines { get; set; }
     DbSet<User> Users { get; set; }
     DbSet<Lookup> Lookups { get; set; }
+    DbSet<BodyPart> BodyParts { get; set; }
+    DbSet<Equipment> Equipments { get; set; }
+    DbSet<TargetMuscle> TargetMuscles { get; set; }
     DbSet<T> GetDbSet<T>() where T : class;
 }

@@ -37,6 +37,9 @@ public abstract class WorkoutPlannerDbContextBase : DbContext
     public DbSet<UserRoutine> UserRoutines { get; set; } = default!;
     public DbSet<User> Users { get; set; } = default!;
     public DbSet<Lookup> Lookups { get; set; } = default!;
+    public DbSet<BodyPart> BodyParts { get; set; } = default!;
+    public DbSet<Equipment> Equipments { get; set; } = default!;
+    public DbSet<TargetMuscle> TargetMuscles { get; set; } = default!;
 
     public DbSet<T> GetDbSet<T>() where T : class
     {
