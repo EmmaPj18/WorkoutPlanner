@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace WorkOutPlanner.API.Middlewares;
+namespace WorkoutPlanner.API.Middlewares;
 
 public class ValidationExceptionMiddleware
 {

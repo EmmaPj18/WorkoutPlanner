@@ -1,5 +1,5 @@
 using FastEndpoints.Swagger;
-using WorkOutPlanner.API;
+using WorkoutPlanner.API;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration

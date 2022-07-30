@@ -1,8 +1,8 @@
 ﻿using FastEndpoints;
 using WorkoutPlanner.Domain.Contracts.Responses;
-using WorkOutPlanner.API.Endpoints;
+using WorkoutPlanner.API.Endpoints;
 
-namespace WorkOutPlanner.API.Summaries;
+namespace WorkoutPlanner.API.Summaries;
 
 public class HelloWorldSummary : Summary<HelloWorldEndpoint>
 {

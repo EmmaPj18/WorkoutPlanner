@@ -1,4 +1,4 @@
-﻿namespace WorkOutPlanner.API;
+﻿namespace WorkoutPlanner.API;
 
 public static class ServiceHost
 {

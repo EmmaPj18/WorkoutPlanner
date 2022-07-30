@@ -1,6 +1,6 @@
 ﻿using WorkoutPlanner.Services.Routines;
 
-namespace WorkOutPlanner.API.Endpoints;
+namespace WorkoutPlanner.API.Endpoints;
 
 [HttpGet("routine"), AllowAnonymous]
 public class GetRoutineEndpoint : Endpoint<GetRoutineRequest, RoutineResponse>

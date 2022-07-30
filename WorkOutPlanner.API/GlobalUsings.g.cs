@@ -6,5 +6,5 @@ global using WorkoutPlanner.Domain.Contracts.Responses;
 global using WorkoutPlanner.Domain.Models;
 global using WorkoutPlanner.Persistence;
 global using WorkoutPlanner.Services;
-global using WorkOutPlanner.API;
-global using WorkOutPlanner.API.Middlewares;
+global using WorkoutPlanner.API;
+global using WorkoutPlanner.API.Middlewares;
