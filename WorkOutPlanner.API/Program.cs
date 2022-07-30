@@ -1,7 +1,9 @@
 using FastEndpoints.Swagger;
+using WorkOutPlanner.API;
 
 var builder = WebApplication.CreateBuilder(args);
-var configuration = builder.Configuration;
+var configuration = builder.Configuration
+    .AddSecretsJson();
 
 // Services
 builder.Services.AddWorkoutPlannerPersistenceServices(configuration);

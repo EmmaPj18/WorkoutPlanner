@@ -30,21 +30,9 @@ public class LookupSeeds : IDataSeedService
             Description = enumValue.GetDescription()
         }).ToArray();
 
-    private readonly Lookup[] EquipmentSeeds = Enum.GetValues<Equipment>()
-        .Select((enumValue, index) => new Lookup
-        {
-            Category = nameof(Equipment),
-            Id = (int)enumValue,
-            IsActive = true,
-            Name = enumValue.ToString(),
-            SortOrder = index,
-            Description = enumValue.GetDescription()
-        }).ToArray();
-
     public void Seed(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Lookup>().HasData(SetTypeSeeds);
         modelBuilder.Entity<Lookup>().HasData(QuantityTypeSeeds);
-        modelBuilder.Entity<Lookup>().HasData(EquipmentSeeds);
     }
 }

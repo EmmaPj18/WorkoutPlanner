@@ -24,6 +24,7 @@ public abstract class DesignTimeDbContextFactoryBase<TContext> :
             .SetBasePath(basePath)
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
             .AddJsonFile($"appsettings.{environment}.json", optional: true, reloadOnChange: true)
+            .AddJsonFile("appsettings.Secrets.json", optional: true, reloadOnChange: true)
             .AddEnvironmentVariables()
             .Build();
 
