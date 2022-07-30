@@ -363,5 +363,8 @@ MigrationBackup/
 FodyWeavers.xsd
 /Docs
 
+# user secrets 
 appsettings.Secrets.json
-.env
+
+# Azure Functions localsettings file
+local.settings.json

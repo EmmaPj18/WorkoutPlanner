@@ -4,7 +4,15 @@
     <AzureFunctionsVersion>v4</AzureFunctionsVersion>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WorkoutPlanner.Common\WorkoutPlanner.Common.csproj" />
+    <ProjectReference Include="..\WorkoutPlanner.Domain\WorkoutPlanner.Domain.csproj" />
+    <ProjectReference Include="..\WorkoutPlanner.Infrastructure\WorkoutPlanner.Infrastructure.csproj" />
+    <ProjectReference Include="..\WorkoutPlanner.Persistence\WorkoutPlanner.Persistence.csproj" />
+    <ProjectReference Include="..\WorkoutPlanner.Services\WorkoutPlanner.Services.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">

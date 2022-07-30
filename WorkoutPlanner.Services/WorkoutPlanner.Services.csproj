@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\WorkoutPlanner.Common\WorkoutPlanner.Common.csproj" />
     <ProjectReference Include="..\WorkoutPlanner.Domain\WorkoutPlanner.Domain.csproj" />
+    <ProjectReference Include="..\WorkoutPlanner.Infrastructure\WorkoutPlanner.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

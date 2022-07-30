@@ -1,7 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using WorkoutPlanner.Common.Helpers;
-using WorkoutPlanner.Common.Validation;
+using WorkoutPlanner.Services.Jobs.Exercises;
+using WorkoutPlanner.Services.Jobs.Interfaces;
 
 namespace WorkoutPlanner.Services;
 public static class Host
@@ -28,6 +29,13 @@ public static class Host
                 services.Add(new ServiceDescriptor(type.GetInterfaces().First(), type, ServiceLifetime.Transient));
             }
         }
+
+        return services;
+    }
+
+    public static IServiceCollection AddWorkoutPlannerFunctionsServices(this IServiceCollection services)
+    {
+        services.AddScoped<IImportExerciseService, HttpImportExerciseService>();
 
         return services;
     }

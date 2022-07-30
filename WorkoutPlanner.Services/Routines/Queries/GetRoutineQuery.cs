@@ -1,4 +1,4 @@
-﻿namespace WorkoutPlanner.Services.Routines;
+﻿namespace WorkoutPlanner.Services.Routines.Queries;
 
 public class GetRoutineQuery : IRequest<RoutineResponse>, IDtoRequest<GetRoutineRequest>
 {
