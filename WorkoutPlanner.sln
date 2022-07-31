@@ -33,8 +33,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutPlanner.Infrastructu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jobs", "Jobs", "{FB844876-30F7-405E-AEB2-D8A9A6E7ABC4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkoutPlanner.Functions", "WorkoutPlanner.Functions\WorkoutPlanner.Functions.csproj", "{636997F9-82EF-4C74-BA7D-99F4932E1EBB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,10 +67,6 @@ Global
 		{91216C12-0747-49A2-B1FF-71421987214C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91216C12-0747-49A2-B1FF-71421987214C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91216C12-0747-49A2-B1FF-71421987214C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{636997F9-82EF-4C74-BA7D-99F4932E1EBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{636997F9-82EF-4C74-BA7D-99F4932E1EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{636997F9-82EF-4C74-BA7D-99F4932E1EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{636997F9-82EF-4C74-BA7D-99F4932E1EBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,7 +79,6 @@ Global
 		{6E37DBEF-46BE-4D29-B542-2D78F3A70545} = {7A72F63A-3032-4550-9EFF-3FE65DA3AB9F}
 		{F9EC6F66-614F-4B90-BA3C-E3708DAE2C69} = {DD8F743B-DCFC-4C3A-9DD5-023AA08001E2}
 		{91216C12-0747-49A2-B1FF-71421987214C} = {DD8F743B-DCFC-4C3A-9DD5-023AA08001E2}
-		{636997F9-82EF-4C74-BA7D-99F4932E1EBB} = {FB844876-30F7-405E-AEB2-D8A9A6E7ABC4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {50938CEE-273D-4010-B282-1477C0C958B1}

@@ -18,6 +18,13 @@ public static class Host
         return services;
     }
 
+    public static IServiceCollection AddWorkoutPlannerBatchJobServices(this IServiceCollection services)
+    {
+        services.AddScoped<IImportExerciseService, HttpImportExerciseService>();
+
+        return services;
+    }
+
     public static IServiceCollection AddValidators(this IServiceCollection services, Assembly toScanAssembly)
     {
         var (found, types) = ServiceHelper.GetClassesImplementingAnInterface(toScanAssembly, typeof(IValidator<>));
@@ -29,13 +36,6 @@ public static class Host
                 services.Add(new ServiceDescriptor(type.GetInterfaces().First(), type, ServiceLifetime.Transient));
             }
         }
-
-        return services;
-    }
-
-    public static IServiceCollection AddWorkoutPlannerFunctionsServices(this IServiceCollection services)
-    {
-        services.AddScoped<IImportExerciseService, HttpImportExerciseService>();
 
         return services;
     }

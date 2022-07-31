@@ -14,7 +14,6 @@ COPY WorkoutPlanner.Services/*.csproj ./WorkoutPlanner.Services/
 COPY WorkoutPlanner.Infrastructure/*.csproj ./WorkoutPlanner.Infrastructure/
 COPY WorkoutPlanner.Migrations/*.csproj ./WorkoutPlanner.Migrations/
 COPY WorkoutPlanner.Persistence/*.csproj ./WorkoutPlanner.Persistence/
-COPY WorkoutPlanner.Functions/*.csproj ./WorkoutPlanner.Functions/
 #
 RUN dotnet restore 
 
@@ -27,7 +26,6 @@ COPY WorkoutPlanner.Services/. ./WorkoutPlanner.Services/
 COPY WorkoutPlanner.Infrastructure/. ./WorkoutPlanner.Infrastructure/
 COPY WorkoutPlanner.Migrations/. ./WorkoutPlanner.Migrations/
 COPY WorkoutPlanner.Persistence/. ./WorkoutPlanner.Persistence/
-COPY WorkoutPlanner.Functions/. ./WorkoutPlanner.Functions/
 #
 WORKDIR /app/WorkoutPlanner.API
 RUN dotnet publish -c Release -o out 
