@@ -8,10 +8,14 @@ ENV ASPNETCORE_URLS=http://*:3000
 #
 COPY *.sln .
 COPY WorkoutPlanner.API/*.csproj ./WorkoutPlanner.API/
+COPY WorkoutPlanner.API.Tests/*.csproj ./WorkoutPlanner.API.Tests/
 COPY WorkoutPlanner.Common/*.csproj ./WorkoutPlanner.Common/
+COPY WorkoutPlanner.Common.Tests/*.csproj ./WorkoutPlanner.Common.Tests/
 COPY WorkoutPlanner.Domain/*.csproj ./WorkoutPlanner.Domain/
 COPY WorkoutPlanner.Services/*.csproj ./WorkoutPlanner.Services/
+COPY WorkoutPlanner.Services.Tests/*.csproj ./WorkoutPlanner.Services.Tests/
 COPY WorkoutPlanner.Infrastructure/*.csproj ./WorkoutPlanner.Infrastructure/
+COPY WorkoutPlanner.Infrastructure.Tests/*.csproj ./WorkoutPlanner.Infrastructure.Tests/
 COPY WorkoutPlanner.Migrations/*.csproj ./WorkoutPlanner.Migrations/
 COPY WorkoutPlanner.Persistence/*.csproj ./WorkoutPlanner.Persistence/
 #
