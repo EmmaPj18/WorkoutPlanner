@@ -1,4 +1,4 @@
-﻿using WorkoutPlanner.Services.Routines;
+﻿using WorkoutPlanner.Services.Routines.Queries;
 
 namespace WorkoutPlanner.API.Endpoints;
 

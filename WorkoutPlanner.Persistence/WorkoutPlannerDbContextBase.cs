@@ -7,7 +7,7 @@ namespace WorkoutPlanner.Persistence;
 
 public abstract class WorkoutPlannerDbContextBase : DbContext
 {
-    public const string CONNECTION_STRING_NAME = "WorkoutPlanner_Db";
+    public const string CONNECTION_STRING_NAME = "WorkoutPlannerDb";
     public const string SCHEMA = "dbo";
     private readonly IEnumerable<IDataSeedService> _dataSeedServices;
 
