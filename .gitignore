@@ -365,6 +365,7 @@ FodyWeavers.xsd
 
 # user secrets 
 appsettings.Secrets.json
+.env
 
 # Azure Functions localsettings file
 local.settings.json

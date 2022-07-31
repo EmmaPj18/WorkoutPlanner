@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  workout_planner-sql-server:
+    image: "mcr.microsoft.com/mssql/server"
+    environment:
+      SA_PASSWORD: "Vf37zTdc3U8"
+      ACCEPT_EULA: "Y"
+  workout_planner-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings_WorkoutPlannerDb=Server=localhost,1433;database=Colours;User Id=sa;Password=Vf37zTdc3U8l
+    build:
+      dockerfile: dockerfile
+      context: WorkoutPlanner.API
+    ports:
+      - "3000:3000"
+    depends_on:
+      - workout_planner-sql-server
+  
